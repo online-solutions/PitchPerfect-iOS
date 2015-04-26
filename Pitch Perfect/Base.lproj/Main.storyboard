@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qtz-s0-EaL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,13 +31,13 @@
                                 <color key="textColor" red="0.11764705882352941" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17v-zY-mpe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17v-zY-mpe">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="Cfc-YP-iXc"/>
                                     <constraint firstAttribute="height" constant="35" id="Dao-vX-33P"/>
                                 </constraints>
-                                <state key="normal" image="StopIcon">
+                                <state key="normal" image="StopIcon" backgroundImage="StopIcon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -54,6 +54,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="saveAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Shk-i1-ABq"/>
+                                    <segue destination="0Tt-Pf-p6u" kind="show" id="LnH-08-97B"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,11 +64,9 @@
                             <constraint firstItem="RQq-9h-uEG" firstAttribute="top" secondItem="APj-KW-Ajb" secondAttribute="bottom" constant="16" id="AgQ-az-np9"/>
                             <constraint firstAttribute="centerX" secondItem="APj-KW-Ajb" secondAttribute="centerX" id="EPM-9A-vxo"/>
                             <constraint firstAttribute="centerX" secondItem="17v-zY-mpe" secondAttribute="centerX" id="Hl3-2g-9Zv"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="17v-zY-mpe" secondAttribute="bottom" constant="20" id="Ied-jQ-KS2"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="17v-zY-mpe" secondAttribute="bottom" constant="50" id="Jrc-F4-Hr7"/>
                             <constraint firstAttribute="centerY" secondItem="APj-KW-Ajb" secondAttribute="centerY" id="Rm7-eV-L4k"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="17v-zY-mpe" secondAttribute="bottom" constant="20" id="ZCd-3Y-cjy"/>
                             <constraint firstAttribute="centerX" secondItem="RQq-9h-uEG" secondAttribute="centerX" constant="-0.5" id="ZQa-oB-blr"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="17v-zY-mpe" secondAttribute="bottom" constant="8" id="ggd-vO-L5V"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -76,15 +75,13 @@
                                 <exclude reference="17v-zY-mpe"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Ied-jQ-KS2"/>
-                                <exclude reference="ZCd-3Y-cjy"/>
-                                <exclude reference="ggd-vO-L5V"/>
+                                <exclude reference="EPM-9A-vxo"/>
+                                <exclude reference="Rm7-eV-L4k"/>
                                 <exclude reference="AgQ-az-np9"/>
                                 <exclude reference="ZQa-oB-blr"/>
                                 <exclude reference="90p-2Z-nWv"/>
                                 <exclude reference="Hl3-2g-9Zv"/>
-                                <exclude reference="EPM-9A-vxo"/>
-                                <exclude reference="Rm7-eV-L4k"/>
+                                <exclude reference="Jrc-F4-Hr7"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -94,18 +91,17 @@
                                 <include reference="17v-zY-mpe"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Ied-jQ-KS2"/>
-                                <include reference="ZCd-3Y-cjy"/>
-                                <include reference="ggd-vO-L5V"/>
+                                <include reference="EPM-9A-vxo"/>
+                                <include reference="Rm7-eV-L4k"/>
                                 <include reference="AgQ-az-np9"/>
                                 <include reference="ZQa-oB-blr"/>
                                 <include reference="90p-2Z-nWv"/>
                                 <include reference="Hl3-2g-9Zv"/>
-                                <include reference="EPM-9A-vxo"/>
-                                <include reference="Rm7-eV-L4k"/>
+                                <include reference="Jrc-F4-Hr7"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Record" id="Fq9-xv-JQW"/>
                     <connections>
                         <outlet property="recordInProcess" destination="RQq-9h-uEG" id="Hwq-L7-VFL"/>
                         <outlet property="stopRecordAudio" destination="17v-zY-mpe" id="oyC-5w-OCl"/>
@@ -113,6 +109,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1582.5" y="204"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UH6-Lb-JHg">
+            <objects>
+                <viewController id="0Tt-Pf-p6u" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zrs-fs-vRt"/>
+                        <viewControllerLayoutGuide type="bottom" id="sEL-Zf-U6q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JKD-nD-jMm">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FOZ-Bv-RBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2235" y="192"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Npf-P2-gK7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qtz-s0-EaL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kJR-pg-22C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Pou-k0-jna"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rP-XB-Tg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838.5" y="204"/>
         </scene>
     </scenes>
     <resources>

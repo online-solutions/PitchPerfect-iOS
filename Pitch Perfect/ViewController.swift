@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var recordInProcess: UILabel!
     @IBOutlet weak var stopRecordAudio: UIButton!
+    @IBOutlet weak var startRecordAudio: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +29,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func recordAudio(sender: UIButton) {
+        // show "recording" text
         recordInProcess.hidden = false
+        // show stop icon
         stopRecordAudio.hidden = false
+        // change bg image
+        let myImage = UIImage(named:"MicroClickedIcon")
+        startRecordAudio.setImage(myImage, forState: UIControlState.Normal)
         //TODO: record user's voice
         println("in recordAudio func")
     }
     
     @IBAction func saveAudio(sender: UIButton) {
         recordInProcess.hidden = true
+        startRecordAudio.setImage(UIImage(named: "MicroIcon"), forState: UIControlState.Normal)
         // TODO: change stop icon to another icon
     }
     

@@ -104,6 +104,7 @@
                     <navigationItem key="navigationItem" title="Record" id="Fq9-xv-JQW"/>
                     <connections>
                         <outlet property="recordInProcess" destination="RQq-9h-uEG" id="Hwq-L7-VFL"/>
+                        <outlet property="startRecordAudio" destination="APj-KW-Ajb" id="8Ly-jY-bh1"/>
                         <outlet property="stopRecordAudio" destination="17v-zY-mpe" id="oyC-5w-OCl"/>
                     </connections>
                 </viewController>
@@ -126,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOZ-Bv-RBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2235" y="192"/>
+            <point key="canvasLocation" x="2292" y="204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Npf-P2-gK7">
@@ -148,7 +149,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MicroIcon" width="100" height="100"/>
+        <image name="MicroIcon" width="50" height="101"/>
         <image name="StopIcon" width="50" height="50"/>
     </resources>
 </document>
